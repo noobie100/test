@@ -21,8 +21,10 @@ size2dpi();
 
 
 function resolution(){
+    
     wdt_scaled=document.getElementById("width_value").value;
     hgt_scaled=document.getElementById("length_value").value;
+    
     //show();
     if(document.getElementById('op1button').style.display=='none'){
         size2dpi();
@@ -31,7 +33,7 @@ function resolution(){
         dpi2size();
     }
     // output_resizer(wdt_scaled,hgt_scaled);
-
+    
 }
 function output_resizer(w,h){
 var output1=document.getElementById('output');
