@@ -75,11 +75,41 @@
       <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-8 text-left"> 
-      <h1>Welcome</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...</p>
+      <b id='first_run'>Resolution is : </b>
+            <div id="res_container" > <input type="text" id="width_value" oninput="resolution();"> x <input type="text" id="length_value" oninput="resolution();"></div>
+            <div id="box-border" style="border: 0.4px solid; padding: 20px 50px 20px 50px; margin:20px 0 20px 0;">
+            <div id="main" style="padding-bottom: 20px;">
+                ----
+            </div>
+
+            <div id="top" class="text-center">
+                <div id='op1' style="display:none;" >Size:
+                    <select id = "myList" class='sameLine' onchange = "size2dpi();" >  <!--can be made hoverable-->
+                        <option> Diagonal </option>  
+                        <option> Width </option>  
+                        <option> Height </option>  
+                        </select>  
+                    <input type="text" class='sameLine' id="size" placeholder="size" value=15.6 oninput="size2dpi()"><br>
+                </div>
+                <div id='op2' style="display:none;" >
+                    DPI # <input type="text" id="dpi" placeholder="dpi" value=75  oninput="dpi2size()"><br>
+                </div>
+            </div>
+            <div style=" margin: auto;
+            width: 30%; text-align: center;">
+            <div id="output" style="position: relative;" >
+                <div style=" margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);"><b id="result_text" style="width:100%; text-align: center; font-weight: bold; font-style: italic;"></b></div>
+            </div>
+        </div>
+            </div>
+            <button onclick="show('op1')" id='op1button' class="button" style="display:none;">Go Back!</button>
+            <button onclick="show('op2')" id='op2button' class="button">Click for DPI &#8646; SIZE </button>   <br>
+            
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">
