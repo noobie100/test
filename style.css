@@ -54,7 +54,7 @@ body{
 }
 #size,#dpi,#width_value,#length_value{
   min-height:24px;
-  min-width:8ch;
+  min-width:fit-content;
   font-size: 18px;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 0.4em;
