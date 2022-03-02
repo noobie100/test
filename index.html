@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="functionality.js" defer></script>
   <style>
@@ -30,16 +31,27 @@
     footer {
       background-color: #555;
       color: white;
-      padding: 15px;
+      padding: 0px;
+      margin:auto;
+ bottom:0;
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
+    @media only screen and (max-width: 767px) {
       .sidenav {
         height: auto;
         padding: 15px;
       }
-      .row.content {height:auto;} 
+      .centerScreen{
+            /* margin: 0; */
+            /* position:relative; */
+            /* margin:0 auto; */
+            left: 50%;
+            -ms-transform: translate(-30%,0%);
+            transform: translate(-30%,0%);
+            
+      }
+      .row.content {height:auto;width: auto;} 
     }
   </style>
 </head>
@@ -53,7 +65,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-            <div class="navbar-brand">
+      <!-- <a class="navbar-brand" href=""></a> -->
+      <div class="navbar-brand">
       
       <p class="navbar-text"><b>Know Your DPI</b></p>
       <img  src="logo.jpg" alt="" style="height:50px;width: 70px;">
@@ -63,16 +76,13 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="#">Project Link</a></li>
         <li><a href="#">Contact</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
 </nav>
-  
+
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
@@ -80,10 +90,13 @@
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p>
     </div>
-    <div class="col-sm-8 text-left"> 
-      <b id='first_run'>Resolution is : </b>
+    
+    <div class="col-sm-8 text-center"> 
+        <br><br>
+              
+            <b id='first_run'>Resolution is : </b>
             <div id="res_container" > <input type="text" id="width_value" oninput="resolution();"> x <input type="text" id="length_value" oninput="resolution();"></div>
-            <div id="box-border" style="border: 0.4px solid; padding: 20px 50px 20px 50px; margin:20px 0 20px 0;">
+            <div id="box-border" style="border: 0.4px solid;padding: 20px 0px 20px 0px; margin:20px 0 20px 0;justify-content: center;">
             <div id="main" style="padding-bottom: 20px;">
                 ----
             </div>
@@ -101,8 +114,7 @@
                     DPI # <input type="text" id="dpi" placeholder="dpi" value=75  oninput="dpi2size()"><br>
                 </div>
             </div>
-            <div style=" margin: auto;
-            width: 30%; text-align: center;">
+            <div class="centerScreen" >
             <div id="output" style="position: relative;" >
                 <div style=" margin: 0;
                 position: absolute;
@@ -129,8 +141,12 @@
 </div>
 
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+    <p>&copy;<em>noobie <em>(Site under development. For enquiry/suggestion or for contributing please drop a mail to <a href = "mailto: screendpi.info@gmail.com">screendpi.info@gmail.com</a>)</em></em></p>
+    
 </footer>
+<div class="caution">
+    <strong>Note!</strong> For accurate results, zoom level must be set to 100% in your browser. All information in the Service is provided &quot;as is&quot;, with no guarantee of completeness, accuracy, timeliness or of the results obtained from the use of this information, and without warranty of any kind, express or implied, including, but not limited to warranties of performance, merchantability and fitness for a particular purpose.<br>We will not be liable to You or anyone else for any decision made or action taken in reliance on the information given by the Service or for any consequential, special or similar damages, even if advised of the possibility of such damages.
+  </div>
 
 </body>
 </html>
