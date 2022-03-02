@@ -109,7 +109,17 @@ body{
   height: 100%;
   width: auto;
 }
+/* @media only screen and (max-width: 767px) {
 
+} */
+.centerScreen{
+  margin: 0;
+  position:relative;
+  margin:0 auto;
+  left: 50%;
+  -ms-transform: translate(-20%,0%);
+  transform: translate(-20%,0%);
+}
 
 
 
