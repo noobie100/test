@@ -49,8 +49,10 @@
             /* left: 50%;
             -ms-transform: translate(-30%,0%);
             transform: translate(-30%,0%); */
-            width: 100%;
-            
+            width: 100%;    
+      }
+      #op1button,#op2button{
+        margin-bottom: 10px;
       }
       .row.content {height:auto;} 
     }
@@ -61,17 +63,15 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <!-- <a class="navbar-brand" href=""></a> -->
       <div class="navbar-brand">
-      
       <p class="navbar-text"><b>Know Your DPI</b></p>
-      <img  src="logo.jpg" alt="" style="height:50px;width: 70px;">
+      <img  src="logotemp.png" alt="" style="height:50px;width: 60px;">
     </div>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>                        
+    </button>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -95,7 +95,7 @@
     <div class="col-sm-8 text-center"> 
         <br><br>
               
-            <b id='first_run'>Resolution is : </b>
+            <strong id='first_run' style="font-size:20px;"><u>Resolution is</u> : </strong>
             <div id="res_container" > <input type="text" id="width_value" oninput="resolution();"> x <input type="text" id="length_value" oninput="resolution();"></div>
             <div id="box-border" style="border: 0.4px solid;padding: 20px 0px 20px 0px; margin:20px 0 20px 0;justify-content: center;position:relative;width:100%;">
             <div id="main" style="padding-bottom: 20px;">
@@ -103,7 +103,7 @@
             </div>
 
             <div id="top" class="text-center" style="display:inline-block;">
-                <div id='op1' style="display:none;" >Size:
+                <div id='op1' style="display:none;" ><strong style="font-size:20px;">Size:</strong>
                     <select id = "myList" class='sameLine' onchange = "size2dpi();" >  <!--can be made hoverable-->
                         <option> Diagonal </option>  
                         <option> Width </option>  
@@ -112,7 +112,7 @@
                     <input type="text" class='sameLine' id="size" placeholder="size" value=15.6 oninput="size2dpi()"><br>
                 </div>
                 <div id='op2' style="display:none;" >
-                    DPI # <input type="text" id="dpi" placeholder="dpi" value=75  oninput="dpi2size()"><br>
+                  <strong style="font-size:20px;">DPI # </strong> <input type="text" id="dpi" placeholder="dpi" value=75  oninput="dpi2size()"><br>
                 </div>
             </div>
             
@@ -123,13 +123,13 @@
                 top: 50%;
                 left: 50%;
                 -ms-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);"><b id="result_text" style="width:100%; text-align: center; font-weight: bold; font-style: italic;"></b>
+                transform: translate(-50%, -50%);"><b id="result_text" style="width:100%; text-align: center; font-weight: bold; font-style: italic;font-size: 20px;"></b>
                 </div>
             </div>
         </div>
             </div>
             <button onclick="show('op1')" id='op1button' class="button" style="display:none;">Go Back!</button>
-            <button onclick="show('op2')" id='op2button' class="button">Click for DPI &#8646; SIZE </button>   <br>
+            <button onclick="show('op2')" id='op2button' class="button">Click for DPI &#8646; SIZE </button>
             
     </div>
     <div class="col-sm-2 sidenav">
@@ -141,15 +141,17 @@
       </div>
     </div>
   </div>
+  
 </div>
 
-<footer class="container-fluid text-center">
-    <p>&copy;<em>noobie <em>(Site under development. For enquiry/suggestion or for contributing please drop a mail to <a href = "mailto: screendpi.info@gmail.com">screendpi.info@gmail.com</a>)</em></em></p>
-    
-</footer>
-<div class="caution">
+<footer class="container-fluid text-left caution">
+    <blockquote style="font-size:medium;">
     <strong>Note!</strong> For accurate results, zoom level must be set to 100% in your browser. All information in the Service is provided &quot;as is&quot;, with no guarantee of completeness, accuracy, timeliness or of the results obtained from the use of this information, and without warranty of any kind, express or implied, including, but not limited to warranties of performance, merchantability and fitness for a particular purpose.<br>We will not be liable to You or anyone else for any decision made or action taken in reliance on the information given by the Service or for any consequential, special or similar damages, even if advised of the possibility of such damages.
-  </div>
+  </blockquote>
+  &copy;<em>noobie <em>(Site under development. For enquiry/suggestion or for contributing please drop a mail to <a href = "mailto: screendpi.info@gmail.com">screendpi.info@gmail.com</a>)</em></em>
+
+</footer>
+
 
 </body>
 </html>
