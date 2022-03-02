@@ -113,10 +113,13 @@ body{
 
 } */
 .centerScreen{
-  margin:0 auto;
-  width: 100%;
-  /* position: relative; */
-  /* left: 50%;
-  -ms-transform: translate(-20%,0%);
-  transform: translate(-20%,0%); */
+  
+  /* width: 100%; */
+
+
+  margin: 0 auto;
+
 }
+
+
+
